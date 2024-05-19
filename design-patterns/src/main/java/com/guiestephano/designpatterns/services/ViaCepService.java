@@ -8,6 +8,6 @@ import com.guiestephano.designpatterns.models.Endereco;
 
 @FeignClient(name = "viacep", url = "https://viacep.com.br/ws")
 public interface ViaCepService {
-	@GetMapping("/{cep}/json/")
+	@GetMapping("/{cep}/json")
 	Endereco consutarCep(@PathVariable("cep")String cep);
 }
